@@ -1,1 +1,7 @@
-<p>button works!</p>
+    <button class="font-bold button-class w-full rounded-[20px] flex justify-center items-center px-5 py-4  cursor-pointer"
+    [ngClass]="{ 
+                 'button-class second-button-class': variant() === 'default',
+                 'button-withBorder second-button-withBorder': variant() === 'withBorder',
+                 'button-without second-button-without':  variant() === 'without'}">
+        {{text()}}
+    </button>

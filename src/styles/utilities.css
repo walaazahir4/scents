@@ -1,0 +1,35 @@
+@layer components{
+
+
+.second-button-class{
+   @apply text-white! bg-[#8F6A77]! hover:bg-[#DCD1D5]!;
+}
+
+.button-class:focus{
+ @apply bg-[#564047]! text-white;   
+}
+
+.second-button-withBorder{
+  @apply border border-[#8F6A77] bg-none text-[#8F6A77]! hover:border-[#DCD1D5] hover:text-[#DCD1D5]!;
+}
+
+.button-withBorder:focus{
+@apply border border-[#564047]! text-[#564047]!;
+}
+
+.second-button-without{
+  @apply border-none bg-none text-[#8F6A77] hover:text-[#DCD1D5];
+}
+
+.button-without:focus{
+@apply text-[#564047]! ;
+}
+
+
+
+
+
+
+
+
+}

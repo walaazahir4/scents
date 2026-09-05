@@ -1,1 +1,47 @@
-<p>navbar works!</p>
+<nav class=" top-0 left-0 z-50 w-full">
+  <div class="mx-auto flex  items-center justify-between px-4 py-4 sm:px-6 ">
+
+    <img src="/images/logo2.png" alt="Logo" class="h-15 w-50 object-contain" />
+
+    <div class="hidden items-center gap-8 md:flex">
+
+      <a [routerLinkActive]="'text-[#564047]'" href="#home"
+        class="text-[20px] font-bold text-black transition hover:text-[#8F6A77]">
+        Home
+      </a>
+
+      <a [routerLinkActive]="'text-[#564047]'" href="#Boutique"
+        class="text-[20px] font-bold text-black transition hover:text-[#8F6A77]">
+        Boutique
+      </a>
+
+      <a [routerLinkActive]="'text-[#564047]'" href="#Occasions"
+        class="text-[20px] font-bold text-black transition hover:text-[#8F6A77]">
+        Occasions
+      </a>
+
+      <a [routerLinkActive]="'text-[#564047]'" href="#About"
+        class="text-[20px] font-bold text-black transition hover:text-[#8F6A77]">
+        About
+      </a>
+
+      <a [routerLinkActive]="'text-[#564047]'" href="#Contact"
+        class="text-[20px] font-bold text-black transition hover:text-[#8F6A77]">
+        Contact
+      </a>
+    </div>
+
+
+    <div class="flex gap-3 w-full">
+      <div> 
+        <scents-button [variant]="'without'" [text]="'SIGN UP'"></scents-button>
+      </div>
+      <div  class="w-full max-w-45">
+        <scents-button></scents-button>
+      </div>
+    </div>
+
+
+
+  </div>
+</nav>
