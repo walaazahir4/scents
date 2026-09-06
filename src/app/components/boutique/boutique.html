@@ -4,7 +4,7 @@
     <p class="text-[20px]">our most loved arrangements , curated our  expert florists</p>
 </div>
 
-<div class=" flex justify-between items-center p-24">
+<div class=" flex flex-col lg:flex-row gap-5 justify-between items-center p-24">
     @for(pic of pics; track $index){
         <div class="rounded-4xl overflow-hidden w-90 h-150 ">
         <img [src]="pic.pic" alt="" class="w-full h-full rounded-4xl object-cover">

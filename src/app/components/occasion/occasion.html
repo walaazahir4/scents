@@ -5,9 +5,9 @@
         <p class="text-[20px]">Find the perfect flowers for any event</p>
     </div>
 
-    <div class=" flex flex-col lg:flex-row gap-3 justify-between items-center pt-24 px-24">
+    <div class=" flex flex-col lg:flex-row w-full gap-3 justify-between items-center p-5 lg:pt-24 lg:px-24">
         @for(card of cards; track $index){
-        <scents-cat-card [image]="card.img" [text]="card.text"></scents-cat-card>
+        <scents-cat-card [image]="card.img" [text]="card.text" class="w-full"></scents-cat-card>
         }
     </div>
 </div>
