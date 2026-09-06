@@ -4,8 +4,10 @@
 @import './styles/utilities.css';
 @import './styles/colors.css';
 @import './styles/typography.css';
-
-
+@import "primeicons/primeicons.css";
 body{
     font-family: var(--font-body);
+}
+html {
+  scroll-behavior: smooth;
 }

@@ -1,1 +1,27 @@
-<p>reviews-card works!</p>
+<button class="rounded-[20px] reviews-card p-6 flex flex-col gap-4 bg-[#F8C8D64D] hover:bg-[#F8C8D699]">
+<div class="flex gap-1">
+<i class="pi pi-star-fill text-[#F9D802]! text-[22px]"></i>
+<i class="pi pi-star-fill text-[#F9D802]! text-[22px]"></i>
+<i class="pi pi-star-fill text-[#F9D802]! text-[22px]"></i>
+<i class="pi pi-star-fill text-[#F9D802]! text-[22px]"></i>
+<i class="pi pi-star-fill text-[#F9D802]! text-[22px]"></i>
+</div>
+<div  class="w-full max-w-83 text-start">
+<p class="text-[24px]">
+    “Perfect gift for my friend’s birthday, she loved it!
+</p>
+</div>
+<div class="flex gap-4 items-center">
+    <div class="w-21 h-21 rounded-full overflow-hidden">
+        <img [src]="img()" alt="user-image" class="object-cover w-full h-full">
+    </div>
+    <div class="text-start">
+        <p class="font-bold text-[24px]">
+            {{name()}}
+        </p>
+        <p class="text-[20px]">
+            {{desc()}}
+        </p>
+    </div>
+</div>
+</button>

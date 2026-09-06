@@ -1,1 +1,28 @@
-<p>occasion works!</p>
+<div class="flex flex-col" id="occasions">
+    <div class="py-20 bg-white flex flex-col">
+    <div class="text-center">
+        <p class="font-bold  text-[44px]">Shop by occasion</p>
+        <p class="text-[20px]">Find the perfect flowers for any event</p>
+    </div>
+
+    <div class=" flex flex-col lg:flex-row gap-3 justify-between items-center pt-24 px-24">
+        @for(card of cards; track $index){
+        <scents-cat-card [image]="card.img" [text]="card.text"></scents-cat-card>
+        }
+    </div>
+</div>
+
+
+<div class="bg-white flex flex-col">
+    <div class="text-center">
+        <p class="font-bold  text-[44px]">Exclusive Offers</p>
+        <p class="text-[20px]">Find the perfect flowers for any event</p>
+    </div>
+
+    <div class=" flex flex-col lg:flex-row gap-3 justify-between items-center p-24">
+       @for(occ of occasions; track $index){
+        <scents-cards-card [img]="occ.img" [title]="occ.title" [desc]="occ.desc" [price]="occ.price"></scents-cards-card>
+       }
+    </div>
+</div>
+</div>

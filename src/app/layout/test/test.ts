@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { Button } from "../../shared/ui/button/button";
+
+import { ReviewsCard } from "../../shared/ui/reviews-card/reviews-card";
 
 @Component({
   selector: 'scents-test',
-  imports: [Button],
+  imports: [ReviewsCard],
   templateUrl: './test.html',
 })
 export class Test {

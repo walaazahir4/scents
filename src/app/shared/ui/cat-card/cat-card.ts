@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'scents-cat-card',
@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   templateUrl: './cat-card.html',
 })
 export class CatCard {
+text = input<string>('Birthday')
+image = input<string>('/images/birthday.png')
 
 }

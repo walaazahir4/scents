@@ -1,26 +1,54 @@
-<footer class="bg-[#8F6A77] py-10 px-24">
+<footer class="bg-[#8F6A77] flex flex-col gap-5 py-10 px-24">
     <div class="flex flex-col justify-center items-center">
         <p class="font-bold text-[44px] text-white">Get in touch</p>
         <p class="text-[20px] text-white">“Have a question or special request? Get in touch with us today.”</p>
     </div>
 
 
-    <div>
-        <div>for form</div>
-        <div>
+    <div class="flex justify-between p-9 gap-9">
+        <div class="w-full max-w-124">
+            <div class="p-10 bg-[#EFFEF0] flex flex-col gap-4 rounded-[20px]">
+                <div class="flex flex-col gap-5">
+                    @for(input of inputs; track $index){
+                    <scents-input [label]="input.label" 
+                                  [icon]="input.icon"
+                                  [placeholder]="input.placeholder"
+                                  [type]="input.type"></scents-input>
+
+                    }
+                    <scents-input [variant]="'textarea'" [icon]="'comment'"></scents-input>
+                </div>
+                <scents-button [text]="'SEND'"></scents-button>
+            </div>
+        </div>
+
+
+
+
+        <div class="flex flex-col justify-center gap-4">
             @for(card of cards; track $index){
-            <div>
-                <div>
-                    <i class="pi pi-{card.icon}"></i>
-                    <p>
+            <div class="flex flex-col gap-2">
+                <div class="text-white flex gap-3 items-center">
+                    <i [class]="`pi pi-${card.icon} text-[20px]`"></i>
+                    <p class="font-semibold text-[24px]">
                         {{card.title}}
                     </p>
                 </div>
-                <p>
+                <p class="text-white text-[18px]">
                     {{card.text}}
                 </p>
             </div>
             }
+
+            <div class="flex items-center gap-9 mt-5">
+               @for (icon of icons; track $index) {
+                   <i
+                      [class]="'pi pi-' + icon.icon + ' text-[40px] cursor-pointer'"
+                      [ngClass]="{
+                                   'text-black': icon.color === 'black',
+                                   'text-red-500': icon.color === 'red-500'}"></i>
+}
+            </div>
         </div>
     </div>
 </footer>

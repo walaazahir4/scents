@@ -1,7 +1,7 @@
-<nav class=" top-0 left-0 z-50 w-full">
-  <div class="mx-auto flex  items-center justify-between px-4 py-4 sm:px-6 ">
+<nav class="fixed top-0 left-0 z-100 w-full bg-white">
+  <div class="mx-auto flex items-center justify-between px-4 py-4 sm:px-6 ">
 
-    <img src="/images/logo2.png" alt="Logo" class="h-15 w-50 object-contain" />
+    <img src="/images/logo2.png" alt="Logo" class="h-15 w-40 object-contain" />
 
     <div class="hidden items-center gap-8 md:flex">
 
@@ -10,29 +10,29 @@
         Home
       </a>
 
-      <a [routerLinkActive]="'text-[#564047]'" href="#Boutique"
+      <a [routerLinkActive]="'text-[#564047]'" href="#boutique"
         class="text-[20px] font-bold text-black transition hover:text-[#8F6A77]">
         Boutique
       </a>
 
-      <a [routerLinkActive]="'text-[#564047]'" href="#Occasions"
+      <a [routerLinkActive]="'text-[#564047]'" href="#occasions"
         class="text-[20px] font-bold text-black transition hover:text-[#8F6A77]">
         Occasions
       </a>
 
-      <a [routerLinkActive]="'text-[#564047]'" href="#About"
+      <a [routerLinkActive]="'text-[#564047]'" href="#about"
         class="text-[20px] font-bold text-black transition hover:text-[#8F6A77]">
         About
       </a>
 
-      <a [routerLinkActive]="'text-[#564047]'" href="#Contact"
+      <a [routerLinkActive]="'text-[#564047]'" href="#contact"
         class="text-[20px] font-bold text-black transition hover:text-[#8F6A77]">
         Contact
       </a>
     </div>
 
 
-    <div class="flex gap-3 w-full">
+    <div class="flex justify-end gap-3 w-full max-w-82">
       <div> 
         <scents-button [variant]="'without'" [text]="'SIGN UP'"></scents-button>
       </div>

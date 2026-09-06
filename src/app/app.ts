@@ -1,13 +1,17 @@
 import { Component, signal } from '@angular/core';
 import { Navbar } from "./layout/navbar/navbar";
-import { RouterOutlet } from '@angular/router';
-import { Button } from "./shared/ui/button/button";
 import { Test } from "./layout/test/test";
 import { Footer } from "./layout/footer/footer";
+import { Home } from "./components/home/home";
+import { Boutique } from "./components/boutique/boutique";
+import { Occasion } from "./components/occasion/occasion";
+import { About } from "./components/about/about";
+import { Contact } from "./components/contact/contact";
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [Navbar, RouterOutlet, Test, Footer],
+  imports: [Navbar, Test, Footer, Home, Boutique, Occasion, About, Contact, RouterModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

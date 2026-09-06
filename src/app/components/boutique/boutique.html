@@ -1,1 +1,14 @@
-<p>boutique works!</p>
+<div class="py-20 px-2.5 bg-[#E8FDE980]" id="boutique">
+<div class="text-center">
+    <p class="font-bold  text-[44px]">Featured Bouquet</p>
+    <p class="text-[20px]">our most loved arrangements , curated our  expert florists</p>
+</div>
+
+<div class=" flex justify-between items-center p-24">
+    @for(pic of pics; track $index){
+        <div class="rounded-4xl overflow-hidden w-90 h-150 ">
+        <img [src]="pic.pic" alt="" class="w-full h-full rounded-4xl object-cover">
+    </div>
+    }
+</div>
+</div>

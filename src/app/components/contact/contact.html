@@ -1,1 +1,27 @@
-<p>contact works!</p>
+<div class="py-20 px-24 flex flex-col gap-6" id="contact">
+    <p class="font-bold text-[44px] text-center">
+        Our customer say
+    </p>
+
+    <div class="flex justify-between items-center">
+        @for(review of reviews; track $index){
+            <scents-reviews-card [img]="review.img" 
+                                 [name]="review.name" 
+                                 [desc]="review.desc"></scents-reviews-card>
+        }
+    </div>
+</div>
+
+<div class="py-20 px-24 flex flex-col gap-6">
+    <p class="font-bold text-[44px] text-center">
+        Delivery & services
+    </p>
+
+    <div class="flex justify-between items-stretch gap-6">
+        @for(service of services; track $index){
+            <scents-service-cards [icon]="service.icon"
+                                  [title]="service.title"
+                                  [desc]="service.desc"></scents-service-cards>
+        }
+    </div>
+</div>

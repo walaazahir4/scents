@@ -4,7 +4,7 @@ import { RouterLinkActive, RouterModule } from "@angular/router";
 
 @Component({
   selector: 'scents-navbar',
-  imports: [Button, RouterModule],
+  imports: [Button, RouterModule, RouterLinkActive ],
   templateUrl: './navbar.html',
 })
 export class Navbar {

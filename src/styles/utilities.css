@@ -25,11 +25,24 @@
 @apply text-[#564047]! ;
 }
 
+.cards-card:focus{
+  @apply bg-[#FDC5D5]!;
+}
 
+.cat-card:focus{
+  @apply bg-[#C5FDC9]!;
+}
 
+.service-card:focus{
+  @apply bg-[#C5FDC9]!;
+}
 
+.reviews-card:focus{
+  @apply bg-[#FDC5D5]!;
+}
 
-
-
+input, textarea{
+  @apply border-none focus:outline-none focus:ring-0;
+}
 
 }

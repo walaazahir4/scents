@@ -1,1 +1,18 @@
-<p>input works!</p>
+<div class="flex flex-col gap-3">
+    <label for="" class="text-[#000000CC] font-bold text-[24px]">{{label()}}</label>
+    @if(variant() === 'input'){
+    <div class="flex items-center gap-2.5 bg-white rounded-[20px] hover:bg-[#EEE9EB] py-2 px-6">
+        <i [class]="`pi pi-${icon()} text-[18px] text-[#000000CC]`"></i>
+         <input [type]="type()"
+            class="flex-1 text-[18px]" [placeholder]="placeholder()">
+    </div>
+    }
+
+    @else{
+    <div class="relative p-3 flex">
+        <i [class]="`pi pi-${icon()} text-[18px] text-[#000000CC] absolute top-8 left-6`"></i>
+        <textarea name="" id="" class="py-4 px-9 flex-1 hover:bg-[#EEE9EB] bg-white resize-none rounded-[20px]" maxlength="500"
+        [placeholder]="placeholder()"></textarea>
+    </div>
+    }
+</div>
