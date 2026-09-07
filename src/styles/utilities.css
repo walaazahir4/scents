@@ -44,5 +44,10 @@
 input, textarea{
   @apply border-none focus:outline-none focus:ring-0;
 }
-
+input::placeholder{
+  @apply text-[9px]! lg:text-[18px]!;
+}
+textarea::placeholder{
+  @apply text-[9px]! lg:text-[18px]!;
+}
 }

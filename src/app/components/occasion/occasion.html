@@ -1,7 +1,7 @@
 <div class="flex flex-col" id="occasions">
     <div class="py-20 bg-white flex flex-col">
     <div class="text-center">
-        <p class="font-bold  text-[44px]">
+        <p class="font-bold text-[36px] lg:text-[44px]">
             {{'occasions.title' | translate}}
         </p>
         <p class="text-[20px]">
@@ -19,7 +19,7 @@
 
 <div class="bg-white flex flex-col">
     <div class="text-center">
-        <p class="font-bold  text-[44px]">
+        <p class="font-bold text-[36px] lg:text-[44px]">
             {{'occasions.exclusiveOffers' | translate}}
         </p>
         <p class="text-[20px]">
@@ -27,7 +27,7 @@
         </p>
     </div>
 
-    <div class=" flex flex-col lg:flex-row gap-3 justify-between items-center p-24">
+    <div class=" flex flex-col lg:flex-row gap-3 justify-between items-center p-9 lg:p-24">
        @for(occ of occasions; track $index){
         <scents-cards-card [img]="occ.img" 
                            [title]="occ.title | translate" 

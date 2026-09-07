@@ -2,62 +2,38 @@
   <div class="mx-auto flex h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
 
     <!-- Logo -->
-    <img
-      src="/images/logo2.png"
-      alt="Logo"
-      class="h-12 w-32 object-contain sm:h-14 sm:w-36 lg:h-15 lg:w-40"
-    />
+    <img src="/images/logo2.png" alt="Logo" class="h-12 w-32 object-contain sm:h-14 sm:w-36 lg:h-15 lg:w-40" />
 
     <!-- Desktop Navigation -->
     <div class="hidden items-center gap-5 lg:flex xl:gap-8">
 
-      <a
-        href="#home"
-        (click)="setActive('home')"
+      <a href="#home" (click)="setActive('home')"
         class="nav-anchor text-base font-bold transition sm:text-lg xl:text-[20px]"
-        [class.text-[#8F6A77]]="activeSection() === 'home'"
-        [class.text-black]="activeSection() !== 'home'"
-      >
+        [class.text-[#8F6A77]]="activeSection() === 'home'" [class.text-black]="activeSection() !== 'home'">
         {{'navbar.home' | translate}}
       </a>
 
-      <a
-        href="#boutique"
-        (click)="setActive('boutique')"
+      <a href="#boutique" (click)="setActive('boutique')"
         class="nav-anchor text-base font-bold transition sm:text-lg xl:text-[20px]"
-        [class.text-[#8F6A77]]="activeSection() === 'boutique'"
-        [class.text-black]="activeSection() !== 'boutique'"
-      >
+        [class.text-[#8F6A77]]="activeSection() === 'boutique'" [class.text-black]="activeSection() !== 'boutique'">
         {{'navbar.boutique' | translate}}
       </a>
 
-      <a
-        href="#occasions"
-        (click)="setActive('occasions')"
+      <a href="#occasions" (click)="setActive('occasions')"
         class="nav-anchor text-base font-bold transition sm:text-lg xl:text-[20px]"
-        [class.text-[#8F6A77]]="activeSection() === 'occasions'"
-        [class.text-black]="activeSection() !== 'occasions'"
-      >
+        [class.text-[#8F6A77]]="activeSection() === 'occasions'" [class.text-black]="activeSection() !== 'occasions'">
         {{'navbar.occasions' | translate}}
       </a>
 
-      <a
-        href="#about"
-        (click)="setActive('about')"
+      <a href="#about" (click)="setActive('about')"
         class="nav-anchor text-base font-bold transition sm:text-lg xl:text-[20px]"
-        [class.text-[#8F6A77]]="activeSection() === 'about'"
-        [class.text-black]="activeSection() !== 'about'"
-      >
+        [class.text-[#8F6A77]]="activeSection() === 'about'" [class.text-black]="activeSection() !== 'about'">
         {{'navbar.about' | translate}}
       </a>
 
-      <a
-        href="#contact"
-        (click)="setActive('contact')"
+      <a href="#contact" (click)="setActive('contact')"
         class="nav-anchor text-base font-bold transition sm:text-lg xl:text-[20px]"
-        [class.text-[#8F6A77]]="activeSection() === 'contact'"
-        [class.text-black]="activeSection() !== 'contact'"
-      >
+        [class.text-[#8F6A77]]="activeSection() === 'contact'" [class.text-black]="activeSection() !== 'contact'">
         {{'navbar.contact' | translate}}
       </a>
 
@@ -66,10 +42,7 @@
     <!-- Desktop Buttons -->
     <div class="hidden items-center justify-end gap-2 lg:flex xl:gap-3">
 
-      <scents-button
-        [variant]="'without'"
-        [text]="'navbar.signUp' | translate"
-      ></scents-button>
+      <scents-button [variant]="'without'" [text]="'navbar.signUp' | translate"></scents-button>
 
       <div class="w-32 xl:w-45">
         <scents-button [text]="'navbar.login' | translate"></scents-button>
@@ -77,39 +50,29 @@
 
       <!-- Language Switcher -->
       <div class="flex items-center rounded-full border border-[#8F6A77]/30 bg-[#8F6A77]/5 p-1">
-        
-        <button
-    type="button"
-    (click)="translateHelper.switchLanguage('en')"
-    class="rounded-full px-3 py-1.5 text-sm font-semibold transition-all duration-200"
-    [class.bg-[#8F6A77]]="translateHelper.currentLanguage() === 'en'"
-    [class.text-white]="translateHelper.currentLanguage() === 'en'"
-    [class.text-[#8F6A77]]="translateHelper.currentLanguage() !== 'en'"
-  >
-    EN
-  </button>
-  
-  <button
-  type="button"
-    (click)="translateHelper.switchLanguage('ar')"
-    class="rounded-full px-3 py-1.5 text-sm font-semibold transition-all duration-200"
-    [class.bg-[#8F6A77]]="translateHelper.currentLanguage() === 'ar'"
-    [class.text-white]="translateHelper.currentLanguage() === 'ar'"
-    [class.text-[#8F6A77]]="translateHelper.currentLanguage() !== 'ar'"
-  >
-    AR
-  </button>
-  
-</div>
-</div>
+
+        <button type="button" (click)="translateHelper.switchLanguage('en')"
+          class="cursor-pointer rounded-full px-3 py-1.5 text-sm font-semibold transition-all duration-200"
+          [class.bg-[#8F6A77]]="translateHelper.currentLanguage() === 'en'"
+          [class.text-white]="translateHelper.currentLanguage() === 'en'"
+          [class.text-[#8F6A77]]="translateHelper.currentLanguage() !== 'en'">
+          EN
+        </button>
+
+        <button type="button" (click)="translateHelper.switchLanguage('ar')"
+          class="cursor-pointer rounded-full px-3 py-1.5 text-sm font-semibold transition-all duration-200"
+          [class.bg-[#8F6A77]]="translateHelper.currentLanguage() === 'ar'"
+          [class.text-white]="translateHelper.currentLanguage() === 'ar'"
+          [class.text-[#8F6A77]]="translateHelper.currentLanguage() !== 'ar'">
+          AR
+        </button>
+
+      </div>
+    </div>
 
     <!-- Mobile Menu Button -->
-    <button
-      type="button"
-      class="flex h-10 w-10 items-center justify-center rounded-lg text-2xl text-black lg:hidden"
-      (click)="isMenuOpen.set(!isMenuOpen())"
-      aria-label="Toggle menu"
-    >
+    <button type="button" class="flex h-10 w-10 items-center justify-center rounded-lg text-2xl text-black lg:hidden"
+      (click)="isMenuOpen.set(!isMenuOpen())" aria-label="Toggle menu">
       <i class="pi pi-align-justify"></i>
     </button>
 
@@ -117,104 +80,70 @@
 
   <!-- Mobile Menu -->
   @if (isMenuOpen()) {
-    <div class="border-t border-gray-100 bg-white px-5 py-5 shadow-md lg:hidden">
+  <div class="border-t border-gray-100 bg-white px-5 py-5 shadow-md lg:hidden">
 
-      <div class="flex flex-col gap-5">
+    <div class="flex flex-col gap-5">
 
-        <a
-          href="#home"
-          (click)="setActive('home'); isMenuOpen.set(false)"
-          class="text-lg font-bold transition"
-          [class.text-[#8F6A77]]="activeSection() === 'home'"
-          [class.text-black]="activeSection() !== 'home'"
-        >
-          {{'navbar.home' | translate}}
-        </a>
+      <a href="#home" (click)="setActive('home'); isMenuOpen.set(false)" class="text-lg font-bold transition"
+        [class.text-[#8F6A77]]="activeSection() === 'home'" [class.text-black]="activeSection() !== 'home'">
+        {{'navbar.home' | translate}}
+      </a>
 
-        <a
-          href="#boutique"
-          (click)="setActive('boutique'); isMenuOpen.set(false)"
-          class="text-lg font-bold transition"
-          [class.text-[#8F6A77]]="activeSection() === 'boutique'"
-          [class.text-black]="activeSection() !== 'boutique'"
-        >
-          {{'navbar.boutique' | translate}}
-        </a>
+      <a href="#boutique" (click)="setActive('boutique'); isMenuOpen.set(false)" class="text-lg font-bold transition"
+        [class.text-[#8F6A77]]="activeSection() === 'boutique'" [class.text-black]="activeSection() !== 'boutique'">
+        {{'navbar.boutique' | translate}}
+      </a>
 
-        <a
-          href="#occasions"
-          (click)="setActive('occasions'); isMenuOpen.set(false)"
-          class="text-lg font-bold transition"
-          [class.text-[#8F6A77]]="activeSection() === 'occasions'"
-          [class.text-black]="activeSection() !== 'occasions'"
-        >
-          {{'navbar.occasions' | translate}}
-        </a>
+      <a href="#occasions" (click)="setActive('occasions'); isMenuOpen.set(false)" class="text-lg font-bold transition"
+        [class.text-[#8F6A77]]="activeSection() === 'occasions'" [class.text-black]="activeSection() !== 'occasions'">
+        {{'navbar.occasions' | translate}}
+      </a>
 
-        <a
-          href="#about"
-          (click)="setActive('about'); isMenuOpen.set(false)"
-          class="text-lg font-bold transition"
-          [class.text-[#8F6A77]]="activeSection() === 'about'"
-          [class.text-black]="activeSection() !== 'about'"
-        >
-          {{'navbar.about' | translate}}
-        </a>
+      <a href="#about" (click)="setActive('about'); isMenuOpen.set(false)" class="text-lg font-bold transition"
+        [class.text-[#8F6A77]]="activeSection() === 'about'" [class.text-black]="activeSection() !== 'about'">
+        {{'navbar.about' | translate}}
+      </a>
 
-        <a
-          href="#contact"
-          (click)="setActive('contact'); isMenuOpen.set(false)"
-          class="text-lg font-bold transition"
-          [class.text-[#8F6A77]]="activeSection() === 'contact'"
-          [class.text-black]="activeSection() !== 'contact'"
-        >
-          {{'navbar.contact' | translate}}
-        </a>
+      <a href="#contact" (click)="setActive('contact'); isMenuOpen.set(false)" class="text-lg font-bold transition"
+        [class.text-[#8F6A77]]="activeSection() === 'contact'" [class.text-black]="activeSection() !== 'contact'">
+        {{'navbar.contact' | translate}}
+      </a>
 
-        <!-- Mobile Buttons -->
-        <div class="mt-2 flex flex-col gap-3 border-t border-gray-100 pt-4 sm:flex-row">
+      <!-- Mobile Buttons -->
+      <div class="mt-2 flex flex-col gap-3 border-t border-gray-100 pt-4 sm:flex-row">
 
-          <scents-button
-            [variant]="'without'"
-            [text]="'navbar.signUp' | translate"
-          ></scents-button>
+        <scents-button [variant]="'without'" [text]="'navbar.signUp' | translate"></scents-button>
 
-          <div class="w-full sm:w-40">
-            <scents-button [text]="'navbar.login' | translate"></scents-button>
-          </div>
+        <div class="w-full sm:w-40">
+          <scents-button [text]="'navbar.login' | translate"></scents-button>
+        </div>
+
+      </div>
+      <!-- Mobile Language Switcher -->
+      <div class="w-full flex justify-center items-center">
+        <div class="flex w-fit items-center rounded-full border border-[#8F6A77]/30 bg-[#8F6A77]/5 p-1">
+
+          <button type="button" (click)="translateHelper.switchLanguage('en')"
+            class="rounded-full px-4 py-2 text-sm font-semibold transition-all duration-200"
+            [class.bg-[#8F6A77]]="translateHelper.currentLanguage() === 'en'"
+            [class.text-white]="translateHelper.currentLanguage() === 'en'"
+            [class.text-[#8F6A77]]="translateHelper.currentLanguage() !== 'en'">
+            EN
+          </button>
+
+          <button type="button" (click)="translateHelper.switchLanguage('ar')"
+            class="rounded-full px-4 py-2 text-sm font-semibold transition-all duration-200"
+            [class.bg-[#8F6A77]]="translateHelper.currentLanguage() === 'ar'"
+            [class.text-white]="translateHelper.currentLanguage() === 'ar'"
+            [class.text-[#8F6A77]]="translateHelper.currentLanguage() !== 'ar'">
+            AR
+          </button>
 
         </div>
-<!-- Mobile Language Switcher -->
-<div class="w-full flex justify-center items-center">
-  <div class="flex w-fit items-center rounded-full border border-[#8F6A77]/30 bg-[#8F6A77]/5 p-1">
-
-  <button
-    type="button"
-    (click)="translateHelper.switchLanguage('en')"
-    class="rounded-full px-4 py-2 text-sm font-semibold transition-all duration-200"
-    [class.bg-[#8F6A77]]="translateHelper.currentLanguage() === 'en'"
-    [class.text-white]="translateHelper.currentLanguage() === 'en'"
-    [class.text-[#8F6A77]]="translateHelper.currentLanguage() !== 'en'"
-  >
-    EN
-  </button>
-
-  <button
-    type="button"
-    (click)="translateHelper.switchLanguage('ar')"
-    class="rounded-full px-4 py-2 text-sm font-semibold transition-all duration-200"
-    [class.bg-[#8F6A77]]="translateHelper.currentLanguage() === 'ar'"
-    [class.text-white]="translateHelper.currentLanguage() === 'ar'"
-    [class.text-[#8F6A77]]="translateHelper.currentLanguage() !== 'ar'"
-  >
-    AR
-  </button>
-
-</div>
-</div>
       </div>
-
     </div>
+
+  </div>
   }
 
 </nav>

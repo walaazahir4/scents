@@ -1,6 +1,6 @@
 <div class="py-20 px-2.5 bg-[#E8FDE980]" id="boutique">
 <div class="text-center">
-    <p class="font-bold  text-[44px]">
+    <p class="font-bold text-[36px] mb-5 lg:mb-0 lg:text-[44px]">
         {{'boutique.title' | translate}}
     </p>
     <p class="text-[20px]">
@@ -8,9 +8,9 @@
     </p>
 </div>
 
-<div class=" flex flex-col lg:flex-row gap-5 justify-between items-center p-24">
+<div class="flex flex-col lg:flex-row gap-5 justify-between items-center p-9 lg:p-24">
     @for(pic of pics; track $index){
-        <div class="rounded-4xl overflow-hidden w-90 h-150 ">
+        <div class="rounded-4xl overflow-hidden w-90 h-150 p-6 lg:p-0">
         <img [src]="pic.pic" alt="" class="w-full h-full rounded-4xl object-cover">
     </div>
     }
