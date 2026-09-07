@@ -10,7 +10,11 @@
 
     @else{
     <div class="relative p-3 flex">
-        <i [class]="`pi pi-${icon()} text-[18px] text-[#000000CC] absolute top-8 left-6`"></i>
+        <i [class]="`pi pi-${icon()} text-[18px] text-[#000000CC] absolute `"
+        [ngClass]="{
+      'top-8 right-6': translateHelper.currentLanguage() === 'ar',
+      'top-10 left-6': translateHelper.currentLanguage() === 'en'
+    }"></i>
         <textarea name="" id="" class="py-4 px-9 flex-1 hover:bg-[#EEE9EB] bg-white resize-none rounded-[20px]" maxlength="500"
         [placeholder]="placeholder()"></textarea>
     </div>

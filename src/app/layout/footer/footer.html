@@ -1,7 +1,11 @@
 <footer class="bg-[#8F6A77] flex flex-col gap-5 p-4 lg:py-10 lg:px-24">
     <div class="flex flex-col justify-center items-center">
-        <p class="font-bold text-[44px] text-white text-nowrap">Get in touch</p>
-        <p class="text-[20px] text-white">“Have a question or special request? Get in touch with us today.”</p>
+        <p class="font-bold text-[44px] text-white text-nowrap">
+            {{'footer.title' | translate}}
+        </p>
+        <p class="text-[20px] text-white">
+            {{'footer.desc' | translate}}
+        </p>
     </div>
 
 
@@ -10,13 +14,13 @@
             <div class="p-10 bg-[#EFFEF0] flex flex-col gap-4 rounded-[20px]">
                 <div class="flex flex-col gap-5">
                     @for(input of inputs; track $index){
-                    <scents-input [label]="input.label" [icon]="input.icon" [placeholder]="input.placeholder"
+                    <scents-input [label]="input.label | translate" [icon]="input.icon" [placeholder]="input.placeholder | translate"
                         [type]="input.type"></scents-input>
 
                     }
-                    <scents-input [variant]="'textarea'" [icon]="'comment'"></scents-input>
+                    <scents-input [variant]="'textarea'" [icon]="'comment'" [label]="'footer.textarea' | translate" [placeholder]="'footer.placeText' | translate"></scents-input>
                 </div>
-                <scents-button [text]="'SEND'"></scents-button>
+                <scents-button [text]="'footer.btn' | translate"></scents-button>
             </div>
         </div>
 
@@ -29,11 +33,11 @@
                 <div class="text-white flex gap-3 items-center">
                     <i [class]="`pi pi-${card.icon} text-[20px]`"></i>
                     <p class="font-semibold text-[24px]">
-                        {{card.title}}
+                        {{card.title | translate}}
                     </p>
                 </div>
                 <p class="text-white text-[18px]">
-                    {{card.text}}
+                    {{card.text | translate}}
                 </p>
             </div>
             }

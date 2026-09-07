@@ -1,0 +1,64 @@
+{
+  "navbar": {
+    "home": "Home",
+    "boutique": "Boutique",
+    "occasions": "Occasions",
+    "about": "About",
+    "contact": "Contact",
+    "signUp": "SIGN UP",
+    "login": "LOGIN"
+  },
+  "home": {
+    "title": "Say It with Flowers",
+    "subtitle": "Bring your emotions to life with our handcrafted bouquets for every occasion.🌸Fresh, elegant,unforgettable.",
+    "btn": "Explore Boutiques"
+  },
+  "boutique": {
+    "title": "Featured Bouquet",
+    "subtitle": "our most loved arrangements , curated our  expert florists"
+  },
+  "occasions": {
+    "title": "Shop by occasion",
+    "subtitle": "Find the perfect flowers for any event",
+    "birthday": "Birthday",
+    "anniversary": "Anniversary",
+    "sympathy": "Sympathy",
+    "justBecause": "Just Because",
+    "exclusiveOffers": "Exclusive Offers",
+    "findFlowers": "Find the perfect flowers for any event",
+    "titleCard": "Rose Elegance",
+    "descCard": "A timeless bouquet of red roses, elegantly wrapped for the one you love.",
+    "btn": "ADD TO CARD"
+  },
+  "about": {
+    "title": "Explore more",
+    "desc": "Discover more of our hand-crafted bouquets, unique flower arrangements, and seasonal collections designed to make every moment special. Explore gifts, care tips, and personalized options that bring beauty to every occasion.",
+    "btnOne": "Explore",
+    "titleTwo": "Our Story",
+    "descTwo": "Flowers was born from a simple passion: turning moments into memories through the beauty of blooms. What started as a small idea grew into a place where emotions are wrapped in petals and tied with care. Every bouquet is hand-crafted with love, using fresh flowers chosen for their elegance and meaning. Whether it’s to celebrate, to comfort, or simply to brighten a day, our story is about creating connections through flowers that speak louder than words."
+  },
+  "contact": {
+    "title": "Our customer say",
+    "titleTwo": "Delivery & services",
+    "cardTitleOne": "Same Day Deliver",
+    "cardTitleTwo": "Customer arrangements",
+    "cardTitleThree": "Event Floristry",
+    "cardDescOne": "“Fresh flowers delivered to your door, the very same day”",
+    "cardDescTwo": "“A glimpse of the special bouquets we created for our happy customers.”",
+    "cardDescThree": "“Transforming your events into unforgettable moments with elegant floral designs.”"
+  },
+  "footer": {
+    "title": "Get in touch",
+    "desc": "“Have a question or special request? Get in touch with us today.”",
+    "label": "Full name",
+    "placeholder": "Enter your name",
+    "email": "Email",
+    "placeEmail": "Enter your email address",
+    "btn": "SEND",
+    "contact": "Contact Us",
+    "shop": "Shop Bouquets",
+    "add": "ADDRESS",
+    "textarea": "Message",
+    "placeText": "Enter your message"
+  }
+}

@@ -1,13 +1,16 @@
-import { AfterViewInit, Component, signal } from '@angular/core';
+import { AfterViewInit, Component, inject, signal } from '@angular/core';
 import { Button } from "../../shared/ui/button/button";
 import { RouterLinkActive, RouterModule } from "@angular/router";
+import { TranslatePipe } from '@ngx-translate/core';
+import { TranslateHelper } from '../../core/services/translate-helper';
 
 @Component({
   selector: 'scents-navbar',
-  imports: [Button, RouterModule ],
+  imports: [Button, RouterModule, TranslatePipe ],
   templateUrl: './navbar.html',
 })
 export class Navbar implements AfterViewInit {
+   translateHelper = inject(TranslateHelper);
   isMenuOpen = signal(false);
  activeSection = signal('home');
 

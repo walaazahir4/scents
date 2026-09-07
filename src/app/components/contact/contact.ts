@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { ReviewsCard } from "../../shared/ui/reviews-card/reviews-card";
 import { CommonModule } from '@angular/common';
 import { ServiceCards } from "../../shared/ui/service-cards/service-cards";
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'scents-contact',
-  imports: [ReviewsCard, CommonModule, ServiceCards],
+  imports: [ReviewsCard, CommonModule, ServiceCards, TranslatePipe],
   templateUrl: './contact.html',
 })
 export class Contact {
@@ -16,8 +17,8 @@ reviews = [
 ]
 
 services = [
-  {icon: 'truck', title: 'Same Day Deliver', desc: '“Fresh flowers delivered to your door, the very same day' },
-  {icon: 'sparkles', title: 'Customer arrangements', desc: '“A glimpse of the special bouquets we created for our happy customers.”' },
-  {icon: 'gift', title: 'Event Floristry', desc: '“Transforming your events into unforgettable moments with elegant floral designs.”' },
+  {icon: 'truck', title: 'contact.cardTitleOne', desc: 'contact.cardDescOne' },
+  {icon: 'sparkles', title: 'contact.cardTitleTwo', desc: 'contact.cardDescTwo' },
+  {icon: 'gift', title: 'contact.cardTitleThree', desc: 'contact.cardDescThree' },
 ]
 }

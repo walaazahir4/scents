@@ -1,12 +1,14 @@
-<div class="bg-[#E8FDE980] p-9 lg:py-20 lg:px-24" id="about">
+<div class="bg-[#E8FDE980] p-9 lg:pt-15 lg:pb-10 lg:px-24" id="about">
     <div class="flex flex-col lg:flex-row justify-between items-center">
         <div class="flex flex-col items-center gap-10 w-full max-w-xl">
-            <p class="text-center text-black font-bold text-[44px] text-nowrap">Explore more</p>
-            <p class="text-start text-[20px]">"Discover more of our hand-crafted bouquets, unique flower arrangements, and seasonal collections
-                designed to make every moment special. Explore gifts, care tips, and personalized options that bring
-                beauty to every occasion."</p>
+            <p class="text-center text-black font-bold text-[44px] text-nowrap">
+                {{'about.title' | translate}}
+            </p>
+            <p class="text-start text-[20px]">
+                {{'about.desc' | translate}}
+            </p>
             <div class="w-full max-w-48 flex justify-center items-center">
-                <scents-button [text]="'Explore'" class="w-full"></scents-button>
+                <scents-button [text]="'about.btnOne' | translate" class="w-full"></scents-button>
             </div>
         </div>
         <div class="flex justify-center items-center">
@@ -16,14 +18,18 @@
 
 </div>
 
-<div class="bg-[#E8FDE980] p-9 lg:py-20 lg:px-24">
+<div class="bg-[#E8FDE980] p-9 lg:pb-15 lg:px-24">
     <div class="flex flex-col lg:flex-row justify-between items-center">
         <div class="flex justify-center items-center w-70 h-70 lg:w-125 lg:h-125 rounded-[20px]">
             <img src="/images/story.jpg" alt="rose" class="w-full h-full object-cover rounded-[20px]">
         </div>
         <div class="flex flex-col pt-5 lg:pt-0 items-center gap-10 w-full max-w-xl">
-            <p class="text-center text-black font-bold text-[44px] text-nowrap">Our Story</p>
-            <p class="text-start text-[20px]">"Flowers was born from a simple passion: turning moments into memories through the beauty of blooms. What started as a small idea grew into a place where emotions are wrapped in petals and tied with care. Every bouquet is hand-crafted with love, using fresh flowers chosen for their elegance and meaning. Whether it’s to celebrate, to comfort, or simply to brighten a day, our story is about creating connections through flowers that speak louder than words."</p>
+            <p class="text-center text-black font-bold text-[44px] text-nowrap">
+                {{'about.titleTwo' | translate}}
+            </p>
+            <p class="text-start text-[20px]">
+                {{'about.descTwo' | translate}}
+            </p>
           
         </div>
     </div>

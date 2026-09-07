@@ -1,13 +1,17 @@
 <div class="flex flex-col" id="occasions">
     <div class="py-20 bg-white flex flex-col">
     <div class="text-center">
-        <p class="font-bold  text-[44px]">Shop by occasion</p>
-        <p class="text-[20px]">Find the perfect flowers for any event</p>
+        <p class="font-bold  text-[44px]">
+            {{'occasions.title' | translate}}
+        </p>
+        <p class="text-[20px]">
+            {{'occasions.subtitle' | translate}}
+        </p>
     </div>
 
     <div class=" flex flex-col lg:flex-row w-full gap-3 justify-between items-center p-5 lg:pt-24 lg:px-24">
         @for(card of cards; track $index){
-        <scents-cat-card [image]="card.img" [text]="card.text" class="w-full"></scents-cat-card>
+        <scents-cat-card [image]="card.img" [text]="card.text | translate" class="w-full"></scents-cat-card>
         }
     </div>
 </div>
@@ -15,13 +19,21 @@
 
 <div class="bg-white flex flex-col">
     <div class="text-center">
-        <p class="font-bold  text-[44px]">Exclusive Offers</p>
-        <p class="text-[20px]">Find the perfect flowers for any event</p>
+        <p class="font-bold  text-[44px]">
+            {{'occasions.exclusiveOffers' | translate}}
+        </p>
+        <p class="text-[20px]">
+            {{'occasions.findFlowers' | translate}}
+        </p>
     </div>
 
     <div class=" flex flex-col lg:flex-row gap-3 justify-between items-center p-24">
        @for(occ of occasions; track $index){
-        <scents-cards-card [img]="occ.img" [title]="occ.title" [desc]="occ.desc" [price]="occ.price"></scents-cards-card>
+        <scents-cards-card [img]="occ.img" 
+                           [title]="occ.title | translate" 
+                           [desc]="occ.desc | translate" 
+                           [price]="occ.price"
+                           [btnText]="'occasions.btn' | translate"></scents-cards-card>
        }
     </div>
 </div>

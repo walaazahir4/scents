@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { Navbar } from "./layout/navbar/navbar";
 import { Test } from "./layout/test/test";
 import { Footer } from "./layout/footer/footer";
@@ -17,4 +17,6 @@ import { RouterModule } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('scents');
+
+ 
 }

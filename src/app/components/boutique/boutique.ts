@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'scents-boutique',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './boutique.html',
 })
 export class Boutique {

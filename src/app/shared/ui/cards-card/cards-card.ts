@@ -10,5 +10,6 @@ export class CardsCard {
 img = input<string>('/images/card1.jpg')
 title = input<string>('Rose Elegance')
 desc = input<string>('A timeless bouquet of red roses, elegantly wrapped for the one you love.')
-price = input<string>('$49.99')
+price = input<string>('$49.99');
+btnText = input<string>('ADD TO CARD');
 }

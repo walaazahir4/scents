@@ -18,7 +18,7 @@
         [class.text-[#8F6A77]]="activeSection() === 'home'"
         [class.text-black]="activeSection() !== 'home'"
       >
-        Home
+        {{'navbar.home' | translate}}
       </a>
 
       <a
@@ -28,7 +28,7 @@
         [class.text-[#8F6A77]]="activeSection() === 'boutique'"
         [class.text-black]="activeSection() !== 'boutique'"
       >
-        Boutique
+        {{'navbar.boutique' | translate}}
       </a>
 
       <a
@@ -38,7 +38,7 @@
         [class.text-[#8F6A77]]="activeSection() === 'occasions'"
         [class.text-black]="activeSection() !== 'occasions'"
       >
-        Occasions
+        {{'navbar.occasions' | translate}}
       </a>
 
       <a
@@ -48,7 +48,7 @@
         [class.text-[#8F6A77]]="activeSection() === 'about'"
         [class.text-black]="activeSection() !== 'about'"
       >
-        About
+        {{'navbar.about' | translate}}
       </a>
 
       <a
@@ -58,7 +58,7 @@
         [class.text-[#8F6A77]]="activeSection() === 'contact'"
         [class.text-black]="activeSection() !== 'contact'"
       >
-        Contact
+        {{'navbar.contact' | translate}}
       </a>
 
     </div>
@@ -68,14 +68,40 @@
 
       <scents-button
         [variant]="'without'"
-        [text]="'SIGN UP'"
+        [text]="'navbar.signUp' | translate"
       ></scents-button>
 
       <div class="w-32 xl:w-45">
-        <scents-button></scents-button>
+        <scents-button [text]="'navbar.login' | translate"></scents-button>
       </div>
 
-    </div>
+      <!-- Language Switcher -->
+      <div class="flex items-center rounded-full border border-[#8F6A77]/30 bg-[#8F6A77]/5 p-1">
+        
+        <button
+    type="button"
+    (click)="translateHelper.switchLanguage('en')"
+    class="rounded-full px-3 py-1.5 text-sm font-semibold transition-all duration-200"
+    [class.bg-[#8F6A77]]="translateHelper.currentLanguage() === 'en'"
+    [class.text-white]="translateHelper.currentLanguage() === 'en'"
+    [class.text-[#8F6A77]]="translateHelper.currentLanguage() !== 'en'"
+  >
+    EN
+  </button>
+  
+  <button
+  type="button"
+    (click)="translateHelper.switchLanguage('ar')"
+    class="rounded-full px-3 py-1.5 text-sm font-semibold transition-all duration-200"
+    [class.bg-[#8F6A77]]="translateHelper.currentLanguage() === 'ar'"
+    [class.text-white]="translateHelper.currentLanguage() === 'ar'"
+    [class.text-[#8F6A77]]="translateHelper.currentLanguage() !== 'ar'"
+  >
+    AR
+  </button>
+  
+</div>
+</div>
 
     <!-- Mobile Menu Button -->
     <button
@@ -102,7 +128,7 @@
           [class.text-[#8F6A77]]="activeSection() === 'home'"
           [class.text-black]="activeSection() !== 'home'"
         >
-          Home
+          {{'navbar.home' | translate}}
         </a>
 
         <a
@@ -112,7 +138,7 @@
           [class.text-[#8F6A77]]="activeSection() === 'boutique'"
           [class.text-black]="activeSection() !== 'boutique'"
         >
-          Boutique
+          {{'navbar.boutique' | translate}}
         </a>
 
         <a
@@ -122,7 +148,7 @@
           [class.text-[#8F6A77]]="activeSection() === 'occasions'"
           [class.text-black]="activeSection() !== 'occasions'"
         >
-          Occasions
+          {{'navbar.occasions' | translate}}
         </a>
 
         <a
@@ -132,7 +158,7 @@
           [class.text-[#8F6A77]]="activeSection() === 'about'"
           [class.text-black]="activeSection() !== 'about'"
         >
-          About
+          {{'navbar.about' | translate}}
         </a>
 
         <a
@@ -142,7 +168,7 @@
           [class.text-[#8F6A77]]="activeSection() === 'contact'"
           [class.text-black]="activeSection() !== 'contact'"
         >
-          Contact
+          {{'navbar.contact' | translate}}
         </a>
 
         <!-- Mobile Buttons -->
@@ -150,15 +176,42 @@
 
           <scents-button
             [variant]="'without'"
-            [text]="'SIGN UP'"
+            [text]="'navbar.signUp' | translate"
           ></scents-button>
 
           <div class="w-full sm:w-40">
-            <scents-button></scents-button>
+            <scents-button [text]="'navbar.login' | translate"></scents-button>
           </div>
 
         </div>
+<!-- Mobile Language Switcher -->
+<div class="w-full flex justify-center items-center">
+  <div class="flex w-fit items-center rounded-full border border-[#8F6A77]/30 bg-[#8F6A77]/5 p-1">
 
+  <button
+    type="button"
+    (click)="translateHelper.switchLanguage('en')"
+    class="rounded-full px-4 py-2 text-sm font-semibold transition-all duration-200"
+    [class.bg-[#8F6A77]]="translateHelper.currentLanguage() === 'en'"
+    [class.text-white]="translateHelper.currentLanguage() === 'en'"
+    [class.text-[#8F6A77]]="translateHelper.currentLanguage() !== 'en'"
+  >
+    EN
+  </button>
+
+  <button
+    type="button"
+    (click)="translateHelper.switchLanguage('ar')"
+    class="rounded-full px-4 py-2 text-sm font-semibold transition-all duration-200"
+    [class.bg-[#8F6A77]]="translateHelper.currentLanguage() === 'ar'"
+    [class.text-white]="translateHelper.currentLanguage() === 'ar'"
+    [class.text-[#8F6A77]]="translateHelper.currentLanguage() !== 'ar'"
+  >
+    AR
+  </button>
+
+</div>
+</div>
       </div>
 
     </div>
