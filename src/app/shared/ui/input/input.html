@@ -3,20 +3,19 @@
     @if(variant() === 'input'){
     <div class="flex items-center gap-2.5 bg-white rounded-[20px] hover:bg-[#EEE9EB] py-2 px-6">
         <i [class]="`pi pi-${icon()} text-[18px] text-[#000000CC]`"></i>
-         <input [type]="type()"
-            class="flex-1 text-[18px]" [placeholder]="placeholder()">
+        <input [type]="type()" class="flex-1 text-[18px]" [placeholder]="placeholder()">
     </div>
     }
 
     @else{
-    <div class="relative p-3 flex">
-        <i [class]="`pi pi-${icon()} text-[18px] text-[#000000CC] absolute `"
-        [ngClass]="{
-      'top-8 right-6': translateHelper.currentLanguage() === 'ar',
-      'top-10 left-6': translateHelper.currentLanguage() === 'en'
-    }"></i>
-        <textarea name="" id="" class="py-4 px-9 flex-1 hover:bg-[#EEE9EB] bg-white resize-none rounded-[20px]" maxlength="500"
-        [placeholder]="placeholder()"></textarea>
+    <div class="relative p-3">
+        <i [class]="'pi pi-' + icon()" class="absolute top-10  -translate-y-1/2 text-[18px] text-[#000000CC]"   [ngClass]="{
+                     'right-6': translateHelper.currentLanguage() === 'ar',
+                     'left-6': translateHelper.currentLanguage() === 'en'}"></i>
+
+        <textarea class="w-full min-h-30 py-4 px-9
+           bg-white hover:bg-[#EEE9EB]
+           resize-none rounded-[20px]" maxlength="500" [placeholder]="placeholder()"></textarea>
     </div>
     }
 </div>
